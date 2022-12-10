@@ -16,21 +16,19 @@
       >
     </v-row>
     <v-row>
-  
-
-      <v-carousel>
+      <v-carousel height="auto">
         <template v-for="(item, index) in products.length">
           <v-carousel-item
             v-if="(index + 1) % columns === 1 || columns === 1"
             :key="index"
           >
             <v-row class="flex-nowrap" style="height: 100%">
-              <template v-for="(n, i) in columns">
+              <template v-for="(product, i) in products">
                 <template v-if="+index + i < products.length">
-                  <v-col :key="i">
+                  <v-col lg="3" md="6" sm="12" xs="12">
                     <v-sheet v-if="+index + i < products.length" height="100%">
                       <v-row
-                        class="fill-height"
+                        class="fill-height d-flex align-center"
                         align="center"
                         justify="center"
                       >
@@ -38,27 +36,17 @@
                           <v-card
                             :loading="loading"
                             class="mx-auto my-12"
-                            max-width="374"
+                            max-width="300"
                           >
-                            <template slot="progress">
-                              <v-progress-linear
-                                color="deep-purple"
-                                height="10"
-                                indeterminate
-                              ></v-progress-linear>
-                            </template>
-
                             <v-img
                               height="250"
-                              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+                              contain
+                              src="../assets/images/productImages/img3.svg"
                             ></v-img>
-
-                            <v-card-title>Cafe Badilico</v-card-title>
-
                             <v-card-text>
                               <v-row align="center" class="mx-0">
                                 <v-rating
-                                  :value="4.5"
+                                  :value="product?.rating"
                                   color="amber"
                                   dense
                                   half-increments
@@ -66,46 +54,29 @@
                                   size="14"
                                 ></v-rating>
 
-                                <div class="grey--text ms-4">4.5 (413)</div>
+                                <div class="grey--text ms-4">
+                                  {{ product?.rating }} ({{ product?.sold }})
+                                </div>
                               </v-row>
-
-                              <div class="my-4 text-subtitle-1">
-                                $ • Italian, Cafe
-                              </div>
-
-                              <div>
-                                Small plates, salads & sandwiches - an intimate
-                                setting with 12 indoor seats plus patio seating.
-                              </div>
                             </v-card-text>
+
+                            <v-card-title>{{ product?.name }}</v-card-title>
 
                             <v-divider class="mx-4"></v-divider>
 
-                            <v-card-title>Tonight's availability</v-card-title>
+                            <v-card-title
+                              >{{ product?.originalPrice }},- <span></span></v-card-title
+                            >
 
-                            <v-card-text>
-                              <v-chip-group
-                                v-model="selection"
-                                active-class="deep-purple accent-4 white--text"
-                                column
-                              >
-                                <v-chip>5:30PM</v-chip>
-
-                                <v-chip>7:30PM</v-chip>
-
-                                <v-chip>8:00PM</v-chip>
-
-                                <v-chip>9:00PM</v-chip>
-                              </v-chip-group>
-                            </v-card-text>
-
-                            <v-card-actions>
+                            <v-card-actions class="justify-center">
                               <v-btn
-                                color="deep-purple lighten-2"
-                                text
-                                @click="reserve"
+                                rounded
+                                class="customButton"
                               >
-                                Reserve
+                                <span class="mr-3">
+                                  <v-icon> mdi-cart-outline </v-icon>
+                                </span>
+                                Kjøp
                               </v-btn>
                             </v-card-actions>
                           </v-card>
@@ -120,6 +91,11 @@
         </template>
       </v-carousel>
     </v-row>
+
+    <v-row>
+      <v-col> </v-col>
+      <v-col> </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -132,21 +108,6 @@ export default {
   data() {
     return {
       products: [],
-
-      slider: [
-        "red",
-        "green",
-        "orange",
-        "blue",
-        "pink",
-        "purple",
-        "indigo",
-        "cyan",
-        "deep-purple",
-        "light-green",
-        "deep-orange",
-        "blue-grey",
-      ],
     };
   },
   mounted() {
@@ -176,4 +137,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.customButton {
+  background-color: #c1272d !important;
+  color: white;
+  font-weight: light;
+  text-transform: lowercase;
+  width: 18rem;
+  height: 10rem;
+}
+
+
+</style>
