@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
     <v-row no-gutters>
-      <v-col lg="4">
-        <div class="mt-10 ml-10">
+      <v-col cols="12" lg="4" md="4" sm="12" xs="12">
+        <div class="mt-lg-10 ml-lg-10 mt-md-10 ml-md-10 mt-sm-5 ml-sm-5 mt-xs-5 ml-xs-5">
           <h1>
             Kaffe<svg
               width="27"
@@ -34,8 +34,8 @@
             </template> -->
         </div>
       </v-col>
-      <v-col lg="4" class="text-left">
-        <div class="sectionB text-left">
+      <v-col cols="12"  lg="4" md="4" sm="12" xs="12" class="text-left">
+        <div class="text-left mt-lg-10  ml-lg-10 ml-md-10 ml-sm-5 ml-sx-5">
           <h3>Kontakt</h3>
           <p></p>
           <p></p>
@@ -51,8 +51,8 @@
           <p>oddgeirkaffe2@buisiness.com</p>
         </div>
       </v-col>
-      <v-col lg="4">
-        <v-row>
+      <v-col cols="12"  lg="4" md="4" sm="12" xs="12">
+        <v-row class="mt-lg-10">
           <v-col>
             <div>
               <h3>Menu</h3>

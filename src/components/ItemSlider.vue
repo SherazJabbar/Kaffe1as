@@ -1,14 +1,14 @@
 <template>
   <v-container fluid class="mt-10">
     <v-row no-gutters>
-      <v-col cols="6">
-        <h1 class="font-weight-black">Kaffemaskiner</h1>
+      <v-col cols="6" lg="6" md="6" sm="6" xs="6">
+        <p class="font-weight-black text-lg-h3 text-lg-h3 text-sm-h6 ">Kaffemaskiner</p>
       </v-col>
-      <v-col cols="6"
-        ><p class="caption text-right mt-3">
+      <v-col cols="6" lg="6" md="6" sm="6" xs="6"
+        ><p class="caption text-right">
           Se alle produktene
           <span>
-            <v-btn text class="caption">
+            <v-btn icon class="caption">
               <v-icon>mdi-chevron-right</v-icon>
             </v-btn>
           </span>
@@ -130,9 +130,7 @@ export default {
 
       return 1;
     },
-    carouselItem() {
-      return Number(this.productsData.length / 4);
-    },
+  
   },
 };
 </script>

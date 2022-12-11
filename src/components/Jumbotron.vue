@@ -1,15 +1,17 @@
 <template>
-  <v-layout class="layout mt-10">
-    <v-row >
-      <v-col lg="6" md="6" sm="12" xs="12" class="text-left">
+  <v-container fluid>
+    <v-row class="layout" :column="$vuetify.breakpoint.mdAndDown" >
+      <v-col class="text-left">
         <v-img
           contain
+          class="fill-height"
+          lazy-src="https://picsum.photos/id/11/10/6"
           src="../assets/images/image-from-rawpixel-id-6738730-png 1.svg"
         >
         </v-img>
       </v-col>
-      <v-col lg="6" md="6" sm="12" xs="12" class="text-left mt-10">
-        <div class="mt-10">
+      <v-col class="text-left mt-lg-10 mt-md-10 mt-sm-3 mt-xs-3">
+        <div class="mt-lg-10 mt-md-10 mt-sm-3 mt-xs-3">
           <h1 >Service og vedlikehold</h1>
           <p></p>
           <p>
@@ -23,11 +25,16 @@
         </div>
       </v-col>
     </v-row>
-  </v-layout>
+  </v-container>
+  
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+  
+    }
+};
 </script>
 
 <style scoped>

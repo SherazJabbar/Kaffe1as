@@ -19,71 +19,77 @@
         </div>
       </v-col>
 
-      <v-col cols="12" lg="6" md="6" sm="6" xs="4">
+      <v-col cols="12" lg="6" md="6" sm="6" xs="12">
         <div>
           <v-img src="../assets/images/img bg.svg"> </v-img>
         </div>
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" lg="12" md="12" sm="6" xs="4">
-        <v-app-bar flat class="d-flex justify-space-around mainAppbar">
-          <v-btn class="buttonGroup" text
+      <v-app-bar flat class="d-flex justify-space-between mainAppbar">
+        <v-col>
+          <v-btn class="buttonGroup ml-6" text
             >Kaffemaskiner
             <span>
-              <v-icon>mdi-circle-small</v-icon>
+              <v-icon>mdi-circle-medium</v-icon>
             </span>
           </v-btn>
-
-          <v-btn text class="buttonGroup"
+        </v-col>
+        <v-col>
+          <v-btn text class="buttonGroup ml-10"
             >Kaffe
             <span>
-              <v-icon>mdi-circle-small</v-icon>
+              <v-icon>mdi-circle-medium</v-icon>
             </span>
-          </v-btn>
-
-          <v-btn text class="buttonGroup"
+          </v-btn></v-col
+        >
+        <v-col>
+          <v-btn text class="buttonGroup ml-10"
             >Kaffemaskiner
             <span>
-              <v-icon>mdi-circle-small</v-icon>
+              <v-icon>mdi-circle-medium</v-icon>
             </span>
-          </v-btn>
-
-          <v-btn text class="buttonGroup"
+          </v-btn></v-col
+        >
+        <v-col
+          ><v-btn text class="buttonGroup ml-10"
             >Kaffe
             <span>
-              <v-icon>mdi-circle-small</v-icon>
+              <v-icon>mdi-circle-medium</v-icon>
             </span>
-          </v-btn>
-
-          <v-btn text class="buttonGroup"
+          </v-btn></v-col
+        >
+        <v-col>
+          <v-btn text class="buttonGroup ml-10"
             >Kaffemaskiner
             <span>
-              <v-icon>mdi-circle-small</v-icon>
+              <v-icon>mdi-circle-medium</v-icon>
             </span>
-          </v-btn>
-
-          <v-btn text class="buttonGroup"
+          </v-btn></v-col
+        >
+        <v-col
+          ><v-btn text class="buttonGroup ml-10"
             >Kaffe
-            <span>
-              <v-icon>mdi-circle-small</v-icon>
+            <span></span>
+              <v-icon>mdi-circle-medium</v-icon>
             </span>
-          </v-btn>
-
-          <v-btn text class="buttonGroup"
+          </v-btn></v-col
+        >
+        <v-col>
+          <v-btn text class="buttonGroup ml-10"
             >Kaffemaskiner
             <span>
-              <v-icon>mdi-circle-small</v-icon>
+              <v-icon>mdi-circle-medium</v-icon>
             </span>
-          </v-btn>
-        </v-app-bar>
-      </v-col>
+          </v-btn></v-col
+        >
+      </v-app-bar>
     </v-row>
     <v-row :column="$vuetify.breakpoint.mdAndDown">
       <item-slider :productsData="data" />
     </v-row>
     <v-row>
-      <jumbo-tron/>
+      <jumbo-tron />
     </v-row>
 
     <v-row :column="$vuetify.breakpoint.mdAndDown">
@@ -102,22 +108,23 @@
           nostra, per inceptos himenaeos.
         </p>
         <p>
-          Praesent auctor purus luctus enim
-          egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
-          Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
-          lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
-          elementum tellus.
+          Praesent auctor purus luctus enim egestas, ac scelerisque ante
+          pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
+          urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit
+          amet lacinia. Aliquam in elementum tellus.
         </p>
-        <v-btn  outlined x-large rounded color="red"> Bli firmakunde </v-btn>
+        <v-btn outlined x-large rounded color="red"> Bli firmakunde </v-btn>
       </v-col>
       <v-col>
-        <v-img class="fill-height" contain src="../assets/images/placeholder for arbeidere.svg">
+        <v-img
+          class="fill-height"
+          contain
+          src="../assets/images/placeholder for arbeidere.svg"
+        >
         </v-img>
       </v-col>
     </v-row>
-
   </v-container>
-
 </template>
 
 <script>
@@ -139,8 +146,8 @@ export default {
 
   components: {
     "item-slider": ItemSlider,
-    "app-footer" : AppFooter,
-    "jumbo-tron" : Jumbotron
+    "app-footer": AppFooter,
+    "jumbo-tron": Jumbotron,
   },
 };
 </script>
@@ -178,9 +185,13 @@ export default {
 }
 
 .appBar {
-  margin-top: 10rem;
+  margin-left: 5rem;
 }
-
+@media screen and (min-width: 480px) {
+  .appBar {
+    margin: 0%;
+  }
+}
 .mainAppbar {
   background-color: #c1272d !important;
 }
