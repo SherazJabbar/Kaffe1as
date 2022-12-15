@@ -2,57 +2,102 @@
   <v-container fluid>
     <v-row no-gutters>
       <v-col cols="12" lg="4" md="4" sm="12" xs="12">
-        <div class="mt-lg-10 ml-lg-10 mt-md-10 ml-md-10 mt-sm-5 ml-sm-5 mt-xs-5 ml-xs-5">
-          <h1>
-            Kaffe<svg
-              width="27"
-              height="27"
-              viewBox="0 0 37 37"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M18.2133 0.000132725C14.6094 0.0139762 11.0906 1.11145 8.10215 3.15367C5.11368 5.1959 2.78985 8.09108 1.42473 11.4729C0.0596176 14.8546 -0.285429 18.571 0.433255 22.1517C1.15194 25.7323 2.90205 29.0164 5.46213 31.5882C8.02221 34.1601 11.2772 35.9041 14.8152 36.5996C18.3531 37.2952 22.0151 36.9109 25.3376 35.4956C28.6602 34.0802 31.4939 31.6973 33.4804 28.6484C35.4668 25.5996 36.5166 22.0217 36.4969 18.3677C36.4705 13.475 34.5304 8.79277 31.1024 5.34906C27.6744 1.90535 23.0388 -0.0184038 18.2133 0.000132725ZM23.4612 33.4841C20.0859 33.9359 16.6677 33.9523 13.2884 33.5329C12.6972 31.2714 14.2026 31.118 15.0996 30.3479C15.0698 24.2684 15.0411 18.1842 15.0136 12.0953C14.4569 11.3008 12.6079 12.8167 11.8827 11.8479C10.807 9.62125 13.9448 8.87553 15.5154 7.60015C17.5775 5.92055 18.3095 2.69725 22.0178 3.07011L22.1415 29.7869C22.2515 31.3585 24.0351 31.2191 23.4612 33.4841Z"
-                fill="#C1272D"
-              /></svg
-            >as
-          </h1>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p>Abonner på nyhetsbrev</p>
-          <v-text-field rounded filled label="Epost"> </v-text-field>
-          <!-- <template v-slot:append>
-              <v-btn  class="customButton" rounded>
-                show
-              </v-btn>
-            </template> -->
+        <div class="ma-8">
+          <div
+            class="d-flex align-start flex-column mb-6 footer"
+            flat
+            style="height: 300px"
+          >
+            <div class="pa-2 mb-auto">
+              <v-img
+                max-height="60"
+                max-width="250"
+                src="../assets/images/kaffe-logo.svg"
+              >
+              </v-img>
+            </div>
+
+            <div class="pa-2" flat><p>Abonner på nyhetsbrev</p></div>
+            <v-container>
+              <div class="pa-2 send-btn-card" flat>
+                <v-row class="d-flex flex-row-reverse">
+                  <v-text-field rounded filled label="Epost"> </v-text-field>
+                  <v-btn class="rounded-pill send-footer-btn" absolute dark x-large>
+                    Send
+                  </v-btn>
+                </v-row>
+              </div>
+            </v-container>
+          </div>
         </div>
       </v-col>
-      <v-col cols="12"  lg="4" md="4" sm="12" xs="12" class="text-left">
-        <div class="text-left mt-lg-10  ml-lg-10 ml-md-10 ml-sm-5 ml-sx-5">
-          <h3>Kontakt</h3>
-          <p></p>
-          <p></p>
-          <p>Kaffe1 AS</p>
-          <p>Postboks 198, 7651 Verdal</p>
-          <p></p>
-          <p></p>
-          <p>+47 94 472 214</p>
-          <p>+47 94 472 214</p>
-          <p></p>
-          <p></p>
-          <p>kaffe1@buisiness.com</p>
-          <p>oddgeirkaffe2@buisiness.com</p>
+      <v-col cols="12" lg="3" md="3" sm="12" xs="12" class="text-left">
+        <div class="text-left ma-8">
+          <v-list-item>
+            <v-list-item-content class="pr-6">
+              <v-list-item-title class="title">Kontakt</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6">
+              Kaffe1 AS Postboks 198, 7651 Verdal
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6"> +47 94 472 214 </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6"> +47 94 472 214 </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6"> kaffe1@buisiness.com </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6">
+              oddgeirkaffe2@buisiness.com
+            </v-list-item-content>
+          </v-list-item>
         </div>
       </v-col>
-      <v-col cols="12"  lg="4" md="4" sm="12" xs="12">
-        <v-row class="mt-lg-10">
+      <v-col cols="12" lg="3" md="3" sm="12" xs="12" class="d-flex">
+        <div class="text-left ma-8">
+          <v-list-item>
+            <v-list-item-content class="pr-6">
+              <v-list-item-title class="title">Kontakt</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6">
+              Kaffe1 AS Postboks 198, 7651 Verdal
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6"> +47 94 472 214 </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6"> +47 94 472 214 </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6"> kaffe1@buisiness.com </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-content class="pr-6">
+              oddgeirkaffe2@buisiness.com
+            </v-list-item-content>
+          </v-list-item>
+        </div>
+
+        <!-- <v-row class="ma-8">
           <v-col>
             <div>
               <h3>Menu</h3>
@@ -87,7 +132,26 @@
               ></v-img>
             </div>
           </v-col>
-        </v-row>
+        </v-row> -->
+      </v-col>
+
+      <v-col cols="12" lg="2" md="2" sm="12" xs="12">
+        <div class="ma-8">
+          <v-img
+            max-height="100"
+            max-width="150"
+            contain
+            class="my-6"
+            src="../assets/images/Fairtrade.svg"
+          ></v-img>
+
+          <v-img
+            max-height="100"
+            max-width="150"
+            contain
+            src="../assets/images/Rainforest Alliance.svg"
+          ></v-img>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -97,7 +161,21 @@
 export default {};
 </script>
 
-<style scoped>
+<style>
+v-list-item-content {
+}
+
+.footer v-card {
+  background: #fbf7f5 !important;
+}
+.send-btn-card {
+  width: 100%;
+}
+
+.send-footer-btn {
+  background-color: #c1272d !important;
+  color: white;
+}
 .customButton {
   background-color: #c1272d !important;
   color: white;

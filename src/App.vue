@@ -1,14 +1,13 @@
 <template>
-  <v-app>
-    <app-header />
+  <v-app class="overflow-x-hidden">
+    <v-container>
+      <app-header />
+    </v-container>
     <v-main>
-      <v-container fluid>
-        <router-view />
-      </v-container>
+      <router-view />
     </v-main>
     <div class="footer">
-      <app-footer/>
-
+      <app-footer />
     </div>
   </v-app>
 </template>
@@ -19,13 +18,20 @@ import AppFooter from "./components/AppFooter.vue";
 export default {
   components: {
     "app-header": AppHeader,
-    "app-footer": AppFooter
+    "app-footer": AppFooter,
   },
 };
 </script>
 
 <style>
-.footer{
-  background-color: #FBF7F5;
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90% !important;
+}
+.footer {
+  background-color: #fbf7f5;
 }
 </style>
